@@ -1,36 +1,39 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import { ArrowRightCircle } from 'react-bootstrap-icons'
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { ArrowRightCircle } from 'react-bootstrap-icons';
 // import { Typewriter } from 'typewriter-effect'
-import headerImg from "../assets/img/rocket1.png"
+import headerImg from '../assets/img/rocket1.png';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = ['Kristina Smagurauskaitė', 'Front-End Developer'];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300 - Math.random() * 100)
+    const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
 
     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
-        }, delta)
+        }, delta);
 
-        return () => { clearInterval(ticker) };
-    },)
-
+        return () => {
+            clearInterval(ticker);
+        };
+    });
 
     const tick = () => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+        let updatedText = isDeleting
+            ? fullText.substring(0, text.length - 1)
+            : fullText.substring(0, text.length + 1);
 
         setText(updatedText);
 
         if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 2)
+            setDelta((prevDelta) => prevDelta / 2);
         }
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true);
@@ -40,28 +43,39 @@ export const Banner = () => {
             setLoopNum(loopNum + 1);
             setDelta(500);
         }
-    }
+    };
 
     return (
-        <section className='banner' id="home">
+        <section className='banner' id='home'>
             <Container>
                 <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7}>
                         <span className='tagline'>Welcome to my portfolio</span>
-                        <h1>{`Hi I'm `}<span className='wrap'>{text}</span>
+                        <h1>
+                            {`Hi I'm `}
+                            <span className='wrap'>{text}</span>
                         </h1>
-                        <p>Extremely passionate about learning, analyzing and creating, therefore crazy about programming!
-                            Open for new opportunities as a Front-End developer, my main goal is to get experience and learn many more things in this field that I discovered myself in!
-</p>
-                        <button onClick={() => { window.location.href = "https://www.linkedin.com/in/kristina-smagurauskaite/" }}>Let's Connect <ArrowRightCircle size={25} /></button>
+                        <p>
+                            Extremely passionate about learning, analyzing and
+                            creating, therefore crazy about programming! Open
+                            for new opportunities as a Front-End developer, my
+                            main goal is to get experience and learn many more
+                            things in this field that I discovered myself in!
+                        </p>
+                        <button
+                            onClick={() => {
+                                window.location.href =
+                                    'https://www.linkedin.com/in/kristina-smagurauskaite/';
+                            }}
+                        >
+                            Let's Connect <ArrowRightCircle size={25} />
+                        </button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img  src={headerImg} alt='Header Img' />
-
+                        <img src={headerImg} alt='Header Img' />
                     </Col>
                 </Row>
             </Container>
         </section>
-    )
-}
-
+    );
+};
