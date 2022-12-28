@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-// import { Typewriter } from 'typewriter-effect'
 import headerImg from '../assets/img/rocket1.png';
 
 export const Banner = () => {

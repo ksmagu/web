@@ -27,11 +27,9 @@ export const Contact = () => {
         }
     }, [status]);
 
-    // const form = useRef();
-
     const sendEmail = async (e) => {
         e.preventDefault();
-        if (!values.user_name || !values.user_email || values.message) {
+        if (!values.user_name || !values.user_email || !values.message) {
             if (!values.user_name) {
                 setError((prev) => ({
                     ...prev,
@@ -74,14 +72,14 @@ export const Contact = () => {
         <section className='contact' id='connect'>
             <Container>
                 <Row className='align-items-center'>
-                    <Col md={6}>
+                    <Col md={6} className=' d-flex justify-content-center'>
                         <img src={contactImg} alt='Contact me' />
                     </Col>
                     <Col md={6}>
                         <h2> Let's get in touch! </h2>
                         <form  onSubmit={sendEmail}>
-                            <Row>
-                                <Col sm={6} className='px-1'>
+                            <Row className='align-items-center'>
+                                <Col sm={6} className='px-1' >
                                     <input
                                         type='text'
                                         name='user_name'

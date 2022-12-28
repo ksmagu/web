@@ -42,16 +42,16 @@ export const Projects = () => {
                             defaultActiveKey={'first'}
                         >
                             <Nav
-                                variant='pills'
+                                // variant='pills'
                                 className='nav-pills mb-5 justify-content-center align-items-center'
-                                id='pills-tab'
+                                // id='pills-tab'
                             ></Nav>
                             <TabContent>
                                 <Tab.Pane eventKey='first'>
-                                    <Row>
+                                    <Row px-2 >
                                         {projects.map((project, index) => {
                                             return (
-                                                <ProjectCard
+                                                <ProjectCard 
                                                     key={index}
                                                     {...project}
                                                 />
