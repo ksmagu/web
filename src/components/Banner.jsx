@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from '../assets/img/rocket1.png';
+import cv from '../assets/resume/CV.pdf';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -61,14 +62,11 @@ export const Banner = () => {
                             main goal is to get experience and learn many more
                             things in this field that I discovered myself in!
                         </p>
-                        <button
-                            onClick={() => {
-                                window.location.href =
-                                    'https://www.linkedin.com/in/kristina-smagurauskaite/';
-                            }}
-                        >
-                            Let's Connect <ArrowRightCircle size={25} />
-                        </button>
+                        <a href={cv}>
+                            <button>
+                                Let's Connect <ArrowRightCircle size={25} />
+                            </button>
+                        </a>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt='Header Img' />
