@@ -64,7 +64,7 @@ export const Banner = () => {
                         </p>
                         <a href={cv}>
                             <button>
-                                Let's Connect <ArrowRightCircle size={25} />
+                                My Resume <ArrowRightCircle size={25} />
                             </button>
                         </a>
                     </Col>
