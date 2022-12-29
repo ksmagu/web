@@ -55,9 +55,8 @@ ul {
     margin: 0;
     padding: 0;
     line-height: normal;
-    text-decoration: none;
+    text-decoration: none !important
 }
-
 a:hover {
     text-decoration: none;
 }
@@ -84,7 +83,6 @@ select:focus {
         padding: 0 150px;
     }
 }
-
 /* p.success {
     color: green;
 }
@@ -136,8 +134,8 @@ span.navbar-text {
     margin-left: 14px;
 }
 .social-icon a {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background: rgba(217, 217, 217, 0.1);
     display: inline-flex;
     border-radius: 50%;
@@ -149,8 +147,8 @@ span.navbar-text {
 }
 .social-icon a::before {
     content: '';
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     background-color: #ffffff;
     border-radius: 50%;
@@ -173,7 +171,7 @@ span.navbar-text {
     font-weight: 500;
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.5);
-    padding: 7px 20px;
+    padding: 5px 15px;
     font-size: 18px;
     margin-left: 18px;
     position: relative;
@@ -240,7 +238,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 /*---------------------Banner Css------------------------------------------------*/
 .banner {
     margin-top: 0;
-    padding: 230px 0 100px 0;
+    padding: 235px 0 100px 0;
     background-image: url('./assets/img/violettt.png');
     filter: brightness(90%);
     background-position: top center;
@@ -257,7 +255,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
         rgba(108, 35, 78, 0.507) -5.91%,
         rgba(49, 32, 123, 0.333) 111.58%
     );
-    font-size: 20px;
+    font-size: 17px;
     margin-bottom: 16px;
     display: inline-block;
 }
