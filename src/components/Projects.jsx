@@ -3,6 +3,8 @@ import { ProjectCard } from './ProjectCard';
 import projImg1 from '../assets/img/img1.png';
 import projImg2 from '../assets/img/project-img2.png';
 import projImg3 from '../assets/img/project-img3.PNG';
+import projImg5 from '../assets/img/project-img5.png';
+
 
 export const Projects = () => {
     const projects = [
@@ -13,10 +15,10 @@ export const Projects = () => {
             imgUrl: projImg2,
         },
         {
-            title: 'Bootstrap Page Replica',
+            title: 'Movie App',
             description:
-                'One of the firsts work, page replica using only HTML and CSS',
-            imgUrl: projImg1,
+                'Search for a movie App. Get more information of each movie by pressing the poster. It was done using React, RESTful API, Saas',
+            imgUrl: projImg5,
         },
         {
             title: 'Google Split Bill',
