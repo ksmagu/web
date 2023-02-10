@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import contactImg from '../assets/img/contact-img.svg';
 
-
 export const Contact = () => {
     const [values, setValues] = useState({
         user_name: '',
@@ -51,21 +50,21 @@ export const Contact = () => {
         } else {
             setStatus('loading');
             try {
-            await emailjs.sendForm(
-                'service_31yh5sp',
-                'template_nag92yo',
-                e.target,
-                'f4tmlWeoTXGEgCvAS'
-            );
-            setValues({ user_name: '', user_email: '', message: '' });
+                await emailjs.sendForm(
+                    'service_31yh5sp',
+                    'template_nag92yo',
+                    e.target,
+                    'f4tmlWeoTXGEgCvAS'
+                );
+                setValues({ user_name: '', user_email: '', message: '' });
 
-            setError('');
-            alert('Message sent!')
-            setStatus('fulfilled');
-        } catch (err) {
-            setStatus('rejected');
+                setError('');
+                alert('Message sent!');
+                setStatus('fulfilled');
+            } catch (err) {
+                setStatus('rejected');
+            }
         }
-    }
     };
 
     return (
@@ -77,9 +76,9 @@ export const Contact = () => {
                     </Col>
                     <Col md={6}>
                         <h2> Let's get in touch! </h2>
-                        <form  onSubmit={sendEmail}>
+                        <form onSubmit={sendEmail}>
                             <Row className='align-items-center'>
-                                <Col sm={6} className='px-1' >
+                                <Col sm={6} className='px-1'>
                                     <input
                                         type='text'
                                         name='user_name'
@@ -88,8 +87,8 @@ export const Contact = () => {
                                             error.name_error
                                                 ? error.name_error
                                                 : 'Name'
-                                        } onChange={handleChange}
-                                        
+                                        }
+                                        onChange={handleChange}
                                     />
                                 </Col>
                                 <Col sm={6} className='px-1'>
